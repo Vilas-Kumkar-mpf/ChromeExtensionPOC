@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .options .field {
+            clear: both;
+            overflow: auto;
+            padding-bottom: 10px;
+        }
+        .options .pull-left {
+            float: left;
+        }
+        .options .pull-right {
+            float: right;
+        }
+        .options .field label {
+            display: inline-block;
+            /* width: 40%; */
+            padding-top: 3px;
+        }
+        .options .field input[type='text'] {
+            display: inline-block;
+            /* width: 60%; */
+        }
+        .options .checkbox input {
+            display: inline-block;
+            margin: 3px 5px 0 0;
+        }
+        .options #status {
+            color: green;
+        }
+    </style>
+    <title>Options for Traffic Monitor</title>
+</head>
+<body class="options">
+    <form name="optionsForm">
+        <div class="field checkbox">
+            <input type="checkbox" name="securedDomain" id="securedDomain" class="pull-left">
+            <label for="securedDomain" class="pull-left">Secured domain (https)</label>
+        </div>
+        <div class="field">
+            <label for="managementUIDomain" class="pull-left">Management UI Domain : </label>
+            <input type="text" name="managementUIDomain" id="managementUIDomain" class="pull-right">
+        </div>
+        <div class="field">
+            <label for="mAnalyticsDomain" class="pull-left">[m]Analytics Domain : </label>
+            <input type="text" name="mAnalyticsDomain" id="mAnalyticsDomain" class="pull-right">
+        </div>
+        <div class="field">
+            <label for="cookieDomain" class="pull-left">Cookie Domain : </label>
+            <input type="text" name="cookieDomain" id="cookieDomain" class="pull-right">
+        </div>
+        <div class="field">
+            <div id="status"></div>
+        </div>
+        <button id="save">Save Options</button>
+    </form>
+    <script src="options.js"></script>
+</body>
+</html>

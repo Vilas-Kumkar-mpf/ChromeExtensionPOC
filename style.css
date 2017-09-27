@@ -1,0 +1,31 @@
+body.trafficMonitor {
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.trafficMonitor h1 {
+    font-size: 15px;
+}
+
+.trafficMonitor #container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trafficMonitor table {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+.trafficMonitor table th {
+    text-align: center;
+    font-size: 14px;
+}
+.trafficMonitor table th, .trafficMonitor table td {
+    border: 1px solid #000;
+    width: 12%;
+    white-space: normal;
+    word-break: break-all;
+    padding: 3px;
+}

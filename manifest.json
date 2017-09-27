@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome Traffic Monitor",
+  "description": "This extension allows the user to check all API/REST request from chrome.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/",
+    "https://*/"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/",
+        "https://*/"
+      ],
+      "css": ["style.css"],
+      "js": ["popup.js"]
+    }
+  ],
+  "options_ui": {
+    // Required.
+    "page": "options.html",
+    // Recommended.
+    "chrome_style": true
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Traffic Monitor POC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="popup.js"></script>
+  </head>
+
+  <body class="trafficMonitor">
+    <h1>Background Color Changer</h1>
+    <div id="container">
+      <span>Choose a color</span>
+      <select id="dropdown">
+        <option selected disabled hidden value=''></option>
+        <option value="white">White</option>
+        <option value="pink">Pink</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+      </select>
+    </div>
+    <hr>
+    <table id="webRequests">
+      <thead>
+        <th>frameId</th>
+        <th>method</th>
+        <th>parentFrameId</th>
+        <th>requestId</th>
+        <th>tabId</th>
+        <th>timeStamp</th>
+        <th>type</th>
+        <th>url</th>
+      </thead>
+    </table>
+  </body>
+</html>
